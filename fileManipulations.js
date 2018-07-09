@@ -38,10 +38,15 @@ fs.open('file.txt', 'r+', (err,fd) => {
 		console.log('File truncated ..');
 	});
 
+	//delete the file
+	fs.unlink('file.txt', (err) => {
+		if(err) throw err;
+		console.log('File deleted');
+	});
+
 	//close the file
-	//fs.close(fd, (err) => {
-	//	if(err) throw err;
-	//	console.log('file closed');
-	//});
-	
+	fs.close(fd, (err) => {
+		if(err) throw err;
+		console.log('file closed');
+	});
 });
