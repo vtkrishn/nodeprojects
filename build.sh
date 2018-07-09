@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git config --global credential.helper "cache --timeout=3600"
+git config --global credential.helper "cache --timeout=40000"
 
 [[ ! $1 ]] && {
 	echo 'please provide comment'
